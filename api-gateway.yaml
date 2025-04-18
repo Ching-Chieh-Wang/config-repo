@@ -21,10 +21,17 @@ spring:
           filters:
             - StripPrefix=1
 
-        - id: product-service
-          uri: lb://product-service
+        - id: product-write-service
+          uri: lb://product-write-service
           predicates:
-            - Path=/product-service/**
+            - Path=/product-write-service/**
+          filters:
+            - StripPrefix=1
+
+        - id: product-read-service
+          uri: lb://product-read-service
+          predicates:
+            - Path=/product-read-service/**
           filters:
             - StripPrefix=1
 
