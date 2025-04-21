@@ -3,7 +3,7 @@ server:
 spring:
   data:
     mongodb:
-    uri: mongodb://root:example@localhost:27017,localhost:27018/productdb?authSource=admin&replicaSet=product-db
+      uri: mongodb://root:example@localhost:27017,localhost:27018/productdb?authSource=admin&replicaSet=product-db
   kafka:
     bootstrap-servers: localhost:9092
     consumer:
