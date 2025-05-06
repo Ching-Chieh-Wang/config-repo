@@ -1,0 +1,4 @@
+azure:
+  keyvault:
+    secret:
+      endpoint: https://your-keyvault.vault.azure.net/
