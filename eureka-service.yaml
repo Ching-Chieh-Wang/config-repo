@@ -5,11 +5,10 @@ spring:
     user:
       name: jingjie
       password: xiuxiulovejingjie
+  boot:
+    admin:
+      context-path: /admin
 
-server:
-  port: 8761
-  servlet:
-    context-path: /admin
 
 eureka:
   client:
