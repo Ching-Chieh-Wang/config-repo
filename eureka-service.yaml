@@ -2,10 +2,11 @@ spring:
   boot:
     admin:
       client:
-        username: jingjie
-        password: xiuxiulovejingjie
         instance:
           metadata:
+            user:
+              name: jingjie
+              password: xiuxiulovejingjie
       context-path: /admin
   application:
     name: eureka-server
