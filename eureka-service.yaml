@@ -3,7 +3,6 @@ spring:
     admin:
       ui:
         path: /admin
-      context-path: /
   application:
     name: eureka-server
   security:
