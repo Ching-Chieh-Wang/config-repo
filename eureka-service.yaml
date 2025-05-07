@@ -6,7 +6,7 @@ spring:
           metadata:
             user:
               name: jingjie
-              passowrd: xiuxiulovejingjie
+              password: xiuxiulovejingjie
       context-path: /admin
   application:
     name: eureka-server
