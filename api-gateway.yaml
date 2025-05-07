@@ -49,6 +49,8 @@ spring:
           filters:
             - StripPrefix=1
 eureka:
+  instance:
+    lease-renewal-interval-in-seconds: 30
   client:
     serviceUrl:
       defaultZone: https://zwap-eureka-service.onrender.com/eureka/
