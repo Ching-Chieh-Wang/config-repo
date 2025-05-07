@@ -1,4 +1,7 @@
 spring:
+  boot:
+    admin:
+      context-path: /admin
   application:
     name: eureka-server
   security:
@@ -9,7 +12,7 @@ spring:
 server:
   port: 8761
   servlet:
-    context-path: /eureka
+    context-path: /
 
 eureka:
   client:
