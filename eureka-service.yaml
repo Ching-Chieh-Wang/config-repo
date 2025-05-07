@@ -1,9 +1,15 @@
 spring:
   application:
     name: eureka-server
+  security:
+    user:
+      name: ${SPRING_SECURITY_USERNAME}
+      password: ${SPRING_SECURITY_PASSWORD}
 
 server:
   port: 8761
+  servlet:
+    context-path: /admin
 
 eureka:
   client:
@@ -11,3 +17,4 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: ${EUREKA_PEER_URL:http://localhost:8761/eureka/}  # fallback if no env var
+
