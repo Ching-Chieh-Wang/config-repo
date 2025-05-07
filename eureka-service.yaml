@@ -5,8 +5,7 @@ spring:
     user:
       name: jingjie
       password: xiuxiulovejingjie
-  boot:
-    admin:
+  servlet:
       context-path: /admin
 
 server:
