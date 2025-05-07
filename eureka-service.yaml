@@ -1,8 +1,7 @@
 spring:
   boot:
     admin:
-      ui:
-        path: /admin
+      context-path: /admin
   application:
     name: eureka-server
   security:
@@ -14,6 +13,13 @@ server:
   port: 8761
 
 eureka:
+  instance:
+    health-check-url-path: /actuator/health
+    metadata-map:
+      startup: ${random.int}    #needed to trigger info and endpoint update after restart
+      user:
+        name: jingjie
+        password: xiuxiulovejingjie
   client:
     register-with-eureka: true
     fetch-registry: true
