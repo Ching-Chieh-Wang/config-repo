@@ -1,4 +1,8 @@
 spring:
+  security:
+    user:
+      name: jingjie
+      password: xiuxiulovejingjie
   boot:
     admin:
       context-path: /admin
@@ -9,6 +13,10 @@ server:
   port: 8761
 
 eureka:
+  instance:
+    health-check-url-path: /actuator/health
+    metadata-map:
+      startup: ${random.int} # needed to trigger info and endpoint update after restart
   client:
     register-with-eureka: true
     fetch-registry: true
@@ -23,4 +31,3 @@ management:
   endpoint:
     health:
       show-details: ALWAYS
-
