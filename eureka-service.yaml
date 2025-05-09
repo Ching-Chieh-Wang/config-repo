@@ -33,7 +33,7 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: ${EUREKA_PEER_URL}
+      defaultZone: ${SERVER_URI}/eureka
 
 management:
   endpoints:
