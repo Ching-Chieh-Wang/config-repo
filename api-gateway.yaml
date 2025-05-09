@@ -4,7 +4,7 @@ spring:
   boot:
     admin:
       client:
-        url: ${SERVER_URI}
+        url: ${SERVER_URL}/admin
         username: ${SPRING_SECURITY_USERNAME}
         password: ${SPRING_SECURITY_PASSWORD}
       context-path: /admin
@@ -63,7 +63,7 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: ${EUREKA_SERVER_URL}
+      defaultZone: ${SERVER_URL}/eureka
 management:
   endpoints:
     web:
