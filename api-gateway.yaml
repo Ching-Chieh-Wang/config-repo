@@ -19,6 +19,9 @@ spring:
           issuer-uri: https://securetoken.google.com/zwap-7df78
           jwk-set-uri: https://www.googleapis.com/service_accounts/v1/jwk/securetoken@system.gserviceaccount.com
   cloud:
+    config:
+      username: ${SPRING_SECURITY_USERNAME}
+      password: ${SPRING_SECURITY_PASSWORD}
     gateway:
       discovery:
         locator:
