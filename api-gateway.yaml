@@ -5,10 +5,8 @@ spring:
     admin:
       client:
         url: ${SERVER_URI}
-        instance:
-          metadata:
-            user.name: ${SPRING_SECURITY_USERNAME}
-            user.password: ${SPRING_SECURITY_PASSWORD}
+        username: ${SPRING_SECURITY_USERNAME}
+        password: ${SPRING_SECURITY_PASSWORD}
       context-path: /admin
   security:
     oauth2:
