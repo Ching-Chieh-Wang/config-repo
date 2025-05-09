@@ -6,7 +6,7 @@ spring:
   boot:
     admin:
       client:
-        url: ${SERVER_URI}/admin
+        url: ${SERVER_URI}
         username: ${SPRING_SECURITY_USERNAME}
         password: ${SPRING_SECURITY_PASSWORD}
         instance:
@@ -21,14 +21,14 @@ server:
   port: 8761
 
 eureka:
-  instance:
-    metadata-map:
-      user:
-        name: ${SPRING_SECURITY_USERNAME}
-        password: ${SPRING_SECURITY_PASSWORD
-
   server:
     peer-node-read-timeout-ms: 10000
+  instance:
+    health-check-url-path: /actuator/health
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${random.int}
+    metadata-map:
+      startup: ${random.int} # needed to trigger info and endpoint update after restart
   client:
     register-with-eureka: true
     fetch-registry: true
