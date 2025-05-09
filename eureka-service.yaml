@@ -15,7 +15,7 @@ server:
   port: 8761
 
 eureka:
-  sever:
+  server:
     peer-node-read-timeout-ms: 10000
   instance:
     health-check-url-path: /actuator/health
