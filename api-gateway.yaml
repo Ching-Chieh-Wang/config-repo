@@ -8,8 +8,8 @@ spring:
         instance:
           prefer-ip: true
           metadata:
-            user.name: ${SPRING_SECURITY_USERNAME}
-            user.password: ${SPRING_SECURITY_PASSWORD}
+            user.name: ${EUREKA_SERVER_USERNAME}
+            user.password: ${EUREKA_SERVER_PASSWORD}
   security:
     oauth2:
       resourceserver:
