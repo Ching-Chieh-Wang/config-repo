@@ -5,9 +5,8 @@ spring:
     admin:
       client:
         url: ${SERVER_URI}/admin
-        username: ${SPRING_SECURITY_USERNAME}
-        password: ${SPRING_SECURITY_PASSWORD}
         instance:
+          prefer-ip: true
           metadata:
             user.name: ${SPRING_SECURITY_USERNAME}
             user.password: ${SPRING_SECURITY_PASSWORD}
@@ -64,3 +63,11 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: ${EUREKA_SERVER_URL}
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
