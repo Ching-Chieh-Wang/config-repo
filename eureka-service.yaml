@@ -5,6 +5,8 @@ spring:
       password: ${SPRING_SECURITY_PASSWORD}
   boot:
     admin:
+      discovery:
+        enabled: true
       client:
         url: ${SERVER_URI}
         username: ${SPRING_SECURITY_USERNAME}
