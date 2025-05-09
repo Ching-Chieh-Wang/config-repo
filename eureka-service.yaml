@@ -21,13 +21,19 @@ server:
   port: 8761
 
 eureka:
+  instance:
+    metadata-map:
+      user:
+        name: ${SPRING_SECURITY_USERNAME}
+        password: ${SPRING_SECURITY_PASSWORD
+
   server:
     peer-node-read-timeout-ms: 10000
   client:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: ${SEVER_URI}
+      defaultZone: ${SEVRER_URI}
 
 management:
   endpoints:
