@@ -4,12 +4,13 @@ spring:
   boot:
     admin:
       client:
-        url: ${SERVER_URI}/admin
+        url: ${SERVER_URI}
+        username: ${SPRING_SECURITY_USERNAME}
+        password: ${SPRING_SECURITY_PASSWORD}
         instance:
-          prefer-ip: true
           metadata:
-            user.name: ${EUREKA_SERVER_USERNAME}
-            user.password: ${EUREKA_SERVER_PASSWORD}
+            user.name: ${SPRING_SECURITY_USERNAME}
+            user.password: ${SPRING_SECURITY_PASSWORD}
   security:
     oauth2:
       resourceserver:
