@@ -6,7 +6,7 @@ spring:
   boot:
     admin:
       client:
-        url: {SEVER_URI}/admin
+        url: ${SEVER_URI}/admin
         username: ${SPRING_SECURITY_USERNAME}
         password: ${SPRING_SECURITY_PASSWORD}
         instance:
