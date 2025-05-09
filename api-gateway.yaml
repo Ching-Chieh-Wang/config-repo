@@ -5,8 +5,6 @@ spring:
     admin:
       client:
         url: ${SERVER_URI}
-        username: ${SPRING_SECURITY_USERNAME}
-        password: ${SPRING_SECURITY_PASSWORD}
         instance:
           metadata:
             user.name: ${SPRING_SECURITY_USERNAME}
