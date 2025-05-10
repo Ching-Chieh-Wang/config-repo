@@ -8,7 +8,7 @@ spring:
       discovery:
         enabled: true
       client:
-        url: ${SERVER_URI}
+        url: ${SERVER_URI}/admin
         username: ${SPRING_SECURITY_USERNAME}
         password: ${SPRING_SECURITY_PASSWORD}
         instance:

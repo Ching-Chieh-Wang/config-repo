@@ -11,7 +11,7 @@ spring:
           metadata:
             user.name: ${SPRING_SECURITY_USERNAME}
             user.password: ${SPRING_SECURITY_PASSWORD}
-      context-path: /admin
+          service-host-type: ip
   security:
     oauth2:
       resourceserver:
