@@ -46,3 +46,9 @@ management:
   endpoint:
     health:
       show-details: ALWAYS
+
+zwap:
+  ping:
+    clients:
+      - https://zwap-config.onrender.com/
+      - https://zwap-api-gateway.onrender.com/
