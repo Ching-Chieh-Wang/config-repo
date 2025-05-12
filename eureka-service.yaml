@@ -8,9 +8,7 @@ server:
 eureka:
   instance:
     prefer-ip-address: true
-    instance-id: ${spring.application.name}:${random.int}
-    metadata-map:
-      startup: ${random.int}
+    instance-id: ${spring.application.name}:${HOSTNAME}
   client:
     register-with-eureka: true
     fetch-registry: true
