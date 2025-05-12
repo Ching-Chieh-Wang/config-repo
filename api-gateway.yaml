@@ -1,17 +1,6 @@
 server:
   port:8080
 spring:
-  boot:
-    admin:
-      client:
-        url: ${SERVER_URL}/admin
-        username: ${SPRING_SECURITY_USERNAME}
-        password: ${SPRING_SECURITY_PASSWORD}
-        instance:
-          metadata:
-            user.name: ${SPRING_SECURITY_USERNAME}
-            user.password: ${SPRING_SECURITY_PASSWORD}
-          service-host-type: ip
   security:
     oauth2:
       resourceserver:
@@ -19,9 +8,6 @@ spring:
           issuer-uri: https://securetoken.google.com/zwap-7df78
           jwk-set-uri: https://www.googleapis.com/service_accounts/v1/jwk/securetoken@system.gserviceaccount.com
   cloud:
-    config:
-      username: ${SPRING_SECURITY_USERNAME}
-      password: ${SPRING_SECURITY_PASSWORD}
     gateway:
       discovery:
         locator:
@@ -68,11 +54,3 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: ${SERVER_URL}/eureka
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-  endpoint:
-    health:
-      show-details: ALWAYS

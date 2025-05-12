@@ -1,22 +1,4 @@
 spring:
-  security:
-    user:
-      name: ${SPRING_SECURITY_USERNAME}
-      password: ${SPRING_SECURITY_PASSWORD}
-  boot:
-    admin:
-      discovery:
-        enabled: true
-      client:
-        url: ADMIN_CLUSTER
-        username: ${SPRING_SECURITY_USERNAME}
-        password: ${SPRING_SECURITY_PASSWORD}
-        instance:
-          metadata:
-            user.name: ${SPRING_SECURITY_USERNAME}
-            user.password: ${SPRING_SECURITY_PASSWORD}
-          service-host-type: ip
-      context-path: /admin
   application:
     name: eureka-server
 
@@ -24,28 +6,16 @@ server:
   port: 8761
 
 eureka:
-  server:
-    peer-node-read-timeout-ms: 10000
   instance:
-    health-check-url-path: /actuator/health
     prefer-ip-address: true
     instance-id: ${spring.application.name}:${random.int}
     metadata-map:
-      startup: ${random.int} # needed to trigger info and endpoint update after restart
+      startup: ${random.int}
   client:
     register-with-eureka: true
     fetch-registry: true
     service-url:
       defaultZone: ${EUREKA_SERVER_URL}
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-  endpoint:
-    health:
-      show-details: ALWAYS
 
 zwap:
   ping:
