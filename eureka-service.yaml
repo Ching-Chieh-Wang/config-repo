@@ -50,5 +50,5 @@ management:
 zwap:
   ping:
     clients:
-      - https://zwap-config.onrender.com/
-      - https://zwap-api-gateway.onrender.com/
+      - ${CONFIG_SERVER_URL}
+      - ${API_GATEWAY_URL}
