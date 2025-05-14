@@ -11,9 +11,10 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: ${EUREKA_SERVER_URL}
-
-zwap:
-  ping:
-    clients:
-      - ${CONFIG_SERVER_URL}
-      - ${API_GATEWAY_URL}
+  instance:
+    prefer-ip-address: false
+    secure-port-enabled: true
+    non-secure-port-enabled: false
+    home-page-url: ${SERVER_URL}/
+    health-check-url: ${SERVER_URL}/actuator/health
+    status-page-url: ${SERVER_URL}/actuator/info
