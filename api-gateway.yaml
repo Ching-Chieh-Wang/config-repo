@@ -53,4 +53,14 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: ${SERVER_URL}/eureka
+      defaultZone: ${EUREKA_SERVER_URL}/eureka
+  instance:
+    prefer-ip-address: false
+    hostname: ${SERVER_HOST}
+    secure-port-enabled: true
+    non-secure-port-enabled: false
+    secure-port: 443
+    non-secure-port: 80
+    home-page-url: https://${SERVER_HOST}
+    health-check-url: https://${SERVER_HOST}/actuator/health
+    status-page-url: https://${SERVER_HOST}/actuator/info
