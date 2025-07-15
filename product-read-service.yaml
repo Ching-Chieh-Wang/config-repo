@@ -1,0 +1,3 @@
+spring:
+  redis:
+    uri: {PRODUCT_REDIS_SERVER_URI}
