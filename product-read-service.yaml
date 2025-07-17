@@ -1,3 +1,5 @@
+server:
+  port: 8081
 spring:
   redis:
-    uri: {PRODUCT_REDIS_SERVER_URI}
+    url: ${REDIS_URI}
