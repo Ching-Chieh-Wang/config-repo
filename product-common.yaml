@@ -1,9 +1,11 @@
 spring:
   data:
     mongodb:
-      uri: {PRODUCT_MONGODB_SERVER_URI}
+      uri: {PRODUCT_MONGODB_SERVICE_URI}
 
 eureka:
   client:
-    serviceUrl:
-      defaultZone: {EUREKA_SERVER_URI}
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: ${service.uri.eureka}/eureka
