@@ -1,4 +1,4 @@
-
+EUREKA_SERVICE_URI: http://localhost:50008
 server:
   port: 50008
 
