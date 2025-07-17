@@ -6,4 +6,3 @@ service:
     product-write: http://localhost:50010
     product-search: http://localhost:50011
     user: http://localhost:50012
-    config: http://localhost:50013

@@ -6,4 +6,3 @@ service:
     product-write: http://linux-080:50010
     product-search: http://linux-081:50011
     user: http://linux-082:50012
-    config: http://linux-075:50019
