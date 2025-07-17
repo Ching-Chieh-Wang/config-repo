@@ -46,6 +46,10 @@ spring:
             - Path=/notification-service/**
           filters:
             - StripPrefix=1
+firebase:
+  project-id:
+    zwap-f5256
+
 eureka:
   client:
     register-with-eureka: true
