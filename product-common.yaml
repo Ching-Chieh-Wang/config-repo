@@ -1,3 +1,8 @@
+spring:
+  data:
+    mongodb:
+      uri: {PRODUCT_MONGODB_SERVER_URI}
+
 eureka:
   client:
     serviceUrl:

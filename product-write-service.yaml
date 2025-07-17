@@ -1,8 +1,5 @@
-spring:
-  data:
-    mongodb:
-      uri: {PRODUCT_MONGODB_SERVER_URI}
-
+server:
+  port: 50010
 
 eureka:
   client:
