@@ -1,12 +1,42 @@
-
 server:
-  port: 50008
+  port: 50008 # The port your Eureka Server will run on
 
 eureka:
   instance:
-    hostname: localhost # Or the actual hostname/IP if deploying to a specific machine
+    # In production, this hostname should be dynamically provided by the environment
+    # (e.g., Kubernetes, Docker environment variable, cloud platform).
+    # It should be the actual, network-accessible hostname or IP of this Eureka instance.
+    hostname: ${EUREKA_SERVICE_URI} # Default to localhost for convenience if variable not set
   client:
-    register-with-eureka: false # Eureka Server itself does NOT register with itself
+    register-with-eureka: false # Eureka Server does NOT register with itself
     fetch-registry: false       # Eureka Server does NOT fetch its own registry
-    serviceUrl:
-      defaultZone: http://${EUREKA_SERVICE_URI}/eureka/ # The URL clients will use to connect
+    # For a single Eureka instance, defaultZone points to itself.
+    # For a clustered setup, this would list other Eureka server instances.
+    defaultZone: http://${EUREKA_SERVICE_URI}/eureka/
+  server:
+    # IMPORTANT: Enable self-preservation in production for stability.
+    # This prevents mass de-registrations during network issues.
+    enable-self-preservation: true # Enabled for production
+
+---
+# --- Development Profile Configuration ---
+# This configuration will override the default settings when the 'dev' profile is active.
+spring:
+  config:
+    activate:
+      on-profile: dev # This block is active only when the 'dev' profile is enabled
+
+
+eureka:
+  instance:
+    hostname: localhost # Explicitly set to localhost for development
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    # For local development, Eureka Server points to itself on localhost.
+    defaultZone: http://localhost:${server.port}/eureka/
+  server:
+    # For local development/testing, you might disable self-preservation
+    # to make instances de-register faster when they stop.
+    # NEVER do this in production.
+    enable-self-preservation: false
