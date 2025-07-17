@@ -1,12 +1,12 @@
 
-server:
-  port: 50008
+# server:
+#   port: 50008
 
-eureka:
-  instance:
-    hostname: localhost # Or the actual hostname/IP if deploying to a specific machine
-  client:
-    register-with-eureka: false # Eureka Server itself does NOT register with itself
-    fetch-registry: false       # Eureka Server does NOT fetch its own registry
-    serviceUrl:
-      defaultZone: http://${EUREKA_SERVICE_URI}/eureka/ # The URL clients will use to connect
+# eureka:
+#   instance:
+#     hostname: localhost # Or the actual hostname/IP if deploying to a specific machine
+#   client:
+#     register-with-eureka: false # Eureka Server itself does NOT register with itself
+#     fetch-registry: false       # Eureka Server does NOT fetch its own registry
+#     serviceUrl:
+#       defaultZone: http://${EUREKA_SERVICE_URI}/eureka/ # The URL clients will use to connect
