@@ -47,8 +47,7 @@ spring:
           filters:
             - StripPrefix=1
 firebase:
-  project-id:
-    zwap-f5256
+  project-id: zwap-f5256
 
 eureka:
   client:
