@@ -1,7 +1,9 @@
-EUREKA_SERVICE_URI: http://linux-077:50008
-API_GATEWAY_SERVICE_URI: http://linux-078:50007
-PRODUCT_READ_SERVICE_URI: http://linux-079:50009
-PRODUCT_WRITE_SERVICE_URI: http://linux-080:50010
-PRODUCT_SEARCH_SERVICE_URI: http://linux-081:50011
-USER_SERVICE_URI: http://linux-082:50012
-CONFIG_SERVICE_URI: http://linux-075:50013
+service:
+  uri:
+    eureka: http://linux-077:50008
+    api-gateway: http://linux-078:50007
+    product-read: http://linux-079:50009
+    product-write: http://linux-080:50010
+    product-search: http://linux-081:50011
+    user: http://linux-082:50012
+    config: http://linux-075:50013
