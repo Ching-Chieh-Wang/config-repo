@@ -2,4 +2,4 @@ server:
   port: 50009
 spring:
   redis:
-    url: ${REDIS_URI}
+    url: ${PRODUCT_REDIS_SERVICE_URI}

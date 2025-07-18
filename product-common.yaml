@@ -1,7 +1,20 @@
 spring:
+  config:
+    import: vault://
   data:
     mongodb:
       uri: {PRODUCT_MONGODB_SERVICE_URI}
+  cloud:
+    vault:
+      authentication: TOKEN
+      token: ${VAULT_TOKEN}
+      scheme: http
+      host: linux-076
+      port: 50006
+      fail-fast: true
+      kv:
+        default-context: config-service
+        profiles:
 
 eureka:
   client:
@@ -9,3 +22,7 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: ${service.uri.eureka}/eureka
+
+
+      
+
