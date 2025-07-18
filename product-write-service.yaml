@@ -1,6 +1,11 @@
 server:
   port: 50010
 
+spring:
+  config:
+    import:
+      "configserver:product-common.yaml"
+
 
 
 
