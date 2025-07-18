@@ -1,5 +1,8 @@
 server:
   port: 50009
 spring:
+  config:
+    import:
+      "configserver:product-common.yaml"
   redis:
     url: ${PRODUCT_REDIS_SERVICE_URI}
